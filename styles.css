@@ -1,0 +1,185 @@
+ /* Base reset and font styling */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #121212;
+    color: #E0E0E0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-container {
+    background: #1C1C1E;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Title and temperature display */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.temperature-display {
+    background: linear-gradient(135deg, #FF8A50, #FF6B00);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+/* Buttons and controls */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.control-button {
+    background: #333;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: #FFFFFF;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.control-button:hover {
+    background: #555;
+}
+
+.stop-temp {
+    font-size: 36px;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px; /* Increase this value for more space below the text */
+}
+
+.status-container {
+    background: #2C2C2E;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.status-container p {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+/* Start/Stop button with flip animation */
+.flip-container {
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px; /* Increase this value for more space */
+}
+
+.start-stop-button {
+    width: 250px; /* Increased width for a wider button */
+    height: 50px; /* Fixed height */
+    position: relative;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.6s, box-shadow 0.3s;
+    cursor: pointer;
+    background: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.start-stop-button.active .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: center; /* Center text horizontally */
+    border-radius: 15px; /* Match the button border-radius */
+}
+
+.flip-front {
+    background: linear-gradient(135deg, #FF8A50, #FF6B00);
+}
+
+.flip-back {
+    background: #FFFFFF;
+    color: #000000;
+    transform: rotateY(180deg);
+}
+
+.start-stop-button:hover {
+    transform: rotateX(10deg); /* Slight rotation on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.service-button {
+    background: #FF6B00;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px; /* Reduce vertical padding and add horizontal padding */
+    text-align: center;
+    font-size: 16px; /* Optionally reduce font size for a smaller button */
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: block; /* Ensure the button behaves like a block element */
+    width: auto; /* Adjust the width to fit content, or set a specific width if needed */
+    margin: 20px auto 0; /* Center the button horizontally with auto margins */
+}
+
+
+.service-button:hover {
+    background: #FF8A50;
+}

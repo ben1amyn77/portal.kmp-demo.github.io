@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMP Pellets Kamin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <h1>KMP Pellets HEATING AB</h1>
+        </div>
+        <div class="temperature-display" id="temp">--</div>
+        <p style="text-align: center; font-size: 14px; color: #AAAAAA;">RUMSTEMPERATUR</p>
+        
+        <div class="controls">
+            <button class="control-button" id="nerknapp">-</button>
+            <div class="stop-temp" id="tstop">--</div>
+            <button class="control-button" id="uppknapp">+</button>
+        </div>
+        <p style="text-align: center; font-size: 14px; color: #AAAAAA; margin-bottom: 10px;">STOPPTEMPERATUR</p>
+        
+        <!-- Start/Stop Button -->
+        <div class="flip-container">
+            <button class="start-stop-button" id="startStopBtn">
+                <div class="flip-inner">
+                    <div class="flip-front">START</div>
+                    <div class="flip-back">STOP</div>
+                </div>
+            </button>
+        </div>
+        
+        <div class="status-container">
+            <p><span>STATUS:</span> <span id="mode">--</span></p>
+            <p><span>GLÖDNING:</span> <span id="glow">--</span></p>
+            <p><span>MATNING:</span> <span id="feed">--</span></p>
+            <p><span>RÖKGASFLÄKT:</span> <span id="xhstf">--</span></p>
+            <p><span>KONVEKTIONSFLÄKT:</span> <span id="cfan">--</span></p>
+            <p><span>FLAMMTEMP:</span> <span id="tflame">--</span></p>
+            <p><span>STOPP:</span> <span id="stop">--</span></p>
+        </div>
+
+        <button class="service-button">LOGG IN</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
